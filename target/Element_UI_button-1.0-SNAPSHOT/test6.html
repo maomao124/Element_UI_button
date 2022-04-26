@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_button
+  File name(文件名): test6
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/26
+  Time(创建时间)： 12:06
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <el-button :type="type" :loading="status">{{message}}</el-button>
+</div>
+
+<script>
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            type: "info",
+            status: true,
+            message: "加载中",
+        },
+        methods: {
+            load: function ()
+            {
+                var that=this;
+                console.log("加载")
+                setTimeout(function ()
+                {
+                    console.log("加载完成")
+                    that.type = "success";
+                    that.status = false;
+                    that.message = "加载完成";
+                }, 2000)
+            }
+        }
+
+    })
+
+    app.load();
+</script>
+
+</body>
+</html>

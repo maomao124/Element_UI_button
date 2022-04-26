@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_button
+  File name(文件名): test9
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/26
+  Time(创建时间)： 12:23
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+    <style>
+        .c {
+            color: lime;
+            background-color: #3a8ee6;
+            width: 400px;
+            height: 200px;
+            font-size: 36px;
+            transition: all 0.3s linear 0s;
+        }
+        .c:hover{
+            color: red;
+            background-color: #f7ff39;
+            transition: all 0.3s linear 0s;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="app">
+    <el-button @click="click" circle class="c" type="primary">普通按钮-自定义属性</el-button>
+    <el-button @click="click" round class="c" type="primary">普通按钮-自定义属性</el-button>
+
+</div>
+
+<script>
+
+    var app = new Vue({
+        el: "#app",
+        data: {},
+        methods: {
+            click:function ()
+            {
+                alert("点击成功")
+            }
+        }
+
+    })
+
+</script>
+
+</body>
+</html>

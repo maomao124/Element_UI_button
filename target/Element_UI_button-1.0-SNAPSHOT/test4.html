@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_button
+  File name(文件名): test4
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/26
+  Time(创建时间)： 12:00
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <el-button type="success" icon="el-icon-share"></el-button>
+    <el-button type="success" icon="el-icon-delete"></el-button>
+    <el-button type="success" icon="el-icon-search">搜索</el-button>
+    <el-button @click="click" type="success">上传<i class="el-icon-upload el-icon--right"></i></el-button>
+
+</div>
+
+<script>
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+        },
+        methods: {
+            click: function ()
+            {
+                alert("上传成功")
+            }
+        }
+
+    })
+</script>
+
+</body>
+</html>

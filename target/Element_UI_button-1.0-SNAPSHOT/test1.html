@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_button
+  File name(文件名): test1
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/26
+  Time(创建时间)： 10:56
+  Description(描述)：
+
+
+参数	说明	类型	可选值	默认值
+size	尺寸	string	medium / small / mini	—
+type	类型	string	primary / success / warning / danger / info / text	—
+plain	是否朴素按钮	boolean	—	false
+round	是否圆角按钮	boolean	—	false
+circle	是否圆形按钮	boolean	—	false
+loading	是否加载中状态	boolean	—	false
+disabled	是否禁用状态	boolean	—	false
+icon	图标类名	string	—	—
+autofocus	是否默认聚焦	boolean	—	false
+native-type	原生 type 属性	string	button / submit / reset	button
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <el-row>
+        <el-button>默认</el-button>
+        <el-button type="primary">主要</el-button>
+        <el-button type="success">成功按钮</el-button>
+        <el-button type="info">信息按钮</el-button>
+        <el-button type="warning">警告按钮</el-button>
+        <el-button @click="d" type="danger">危险按钮</el-button>
+    </el-row>
+    <br>
+    <el-row>
+        <el-button plain="plain">朴素按钮</el-button>
+        <el-button type="primary" plain>主要按钮</el-button>
+        <el-button type="success" plain>成功按钮</el-button>
+        <el-button type="info" plain>信息按钮</el-button>
+        <el-button type="warning" plain>警告按钮</el-button>
+        <el-button @click="d" plain type="danger">危险按钮</el-button>
+    </el-row>
+
+    <br>
+
+    <el-row>
+        <el-button>默认</el-button>
+        <el-button type="primary" round>主要</el-button>
+        <el-button type="success" round>成功按钮</el-button>
+        <el-button type="info" round>信息按钮</el-button>
+        <el-button type="warning" round>警告按钮</el-button>
+        <el-button @click="d" round type="danger">危险按钮</el-button>
+    </el-row>
+
+    <br>
+
+    <el-row>
+        <el-button type="primary" circle>圆</el-button>
+        <el-button type="success" circle>圆.....</el-button>
+        <el-button type="success" circle>圆..................</el-button>
+        <el-button icon="el-icon-search" circle></el-button>
+        <el-button type="primary" icon="el-icon-edit" circle></el-button>
+        <el-button type="success" icon="el-icon-check" circle></el-button>
+        <el-button type="info" icon="el-icon-message" circle></el-button>
+        <el-button type="warning" icon="el-icon-star-off" circle></el-button>
+        <el-button @click="d" type="danger" icon="el-icon-delete" circle></el-button>
+    </el-row>
+</div>
+
+
+<script>
+
+    var app = new Vue({
+        el: "#app",
+        data: {},
+        methods: {
+            d: function ()
+            {
+                alert("点击危险按钮");
+            }
+        }
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_button
+  File name(文件名): test3
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/26
+  Time(创建时间)： 11:56
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <el-button @click="click" type="text">文字按钮</el-button>
+    <el-button  type="text" disabled>文字按钮</el-button>
+
+</div>
+
+<script>
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+        },
+        methods: {
+            click: function ()
+            {
+                alert("点击成功")
+            }
+        }
+
+    })
+</script>
+</body>
+</html>
