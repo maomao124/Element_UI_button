@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_button
+  File name(文件名): test2
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/26
+  Time(创建时间)： 11:10
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <el-row>
+        <el-button disabled>默认按钮</el-button>
+        <el-button type="primary" disabled>主要按钮</el-button>
+        <el-button type="success" disabled>成功按钮</el-button>
+        <el-button type="info" disabled>信息按钮</el-button>
+        <el-button type="warning" disabled>警告按钮</el-button>
+        <el-button type="danger" disabled>危险按钮</el-button>
+    </el-row>
+
+    <br>
+    <br>
+    <br>
+    <el-button type="primary" @click="change">点击更改状态</el-button>
+    <el-button @click="click" :type="type" :disabled="!status">这是一个按钮</el-button>
+
+</div>
+
+<script>
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            status: true,
+            type: "success"
+        },
+        methods: {
+            change: function ()
+            {
+                if (this.status === true)
+                {
+                    this.status = false;
+                    this.type = "danger";
+                }
+                else
+                {
+                    this.status = true;
+                    this.type = "success";
+                }
+            },
+            click: function ()
+            {
+                alert("点击成功")
+            }
+        }
+
+    })
+</script>
+</body>
+</html>
