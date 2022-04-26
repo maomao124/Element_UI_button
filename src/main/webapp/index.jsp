@@ -10,7 +10,7 @@
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
 
-<%
+
 <%int n = 9;%>
 <%
     for (int i = 0; i < n; i++)
@@ -22,6 +22,6 @@
 <%
     }
 %>
-%>
+
 </body>
 </html>
