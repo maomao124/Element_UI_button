@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_button
+  File name(文件名): test7
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/26
+  Time(创建时间)： 12:15
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <el-row>
+        <el-button type="success">默认按钮</el-button>
+        <el-button type="success" size="medium">中等按钮</el-button>
+        <el-button type="success" size="small">小型按钮</el-button>
+        <el-button type="success" size="mini">超小按钮</el-button>
+    </el-row>
+    <br>
+    <el-row>
+        <el-button type="success" round>默认按钮</el-button>
+        <el-button type="success" size="medium" round>中等按钮</el-button>
+        <el-button type="success" size="small" round>小型按钮</el-button>
+        <el-button type="success" size="mini" round>超小按钮</el-button>
+    </el-row>
+
+    <br>
+    <el-button :type="type" size="medium" :loading="status">{{message}}</el-button>
+    <el-button :type="type" size="small" :loading="status">{{message}}</el-button>
+    <el-button :type="type" size="mini" :loading="status">{{message}}</el-button>
+
+
+</div>
+
+<script>
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            type: "info",
+            status: true,
+            message: "加载中",
+        },
+        methods: {
+            load: function ()
+            {
+                var that=this;
+                console.log("加载")
+                setTimeout(function ()
+                {
+                    console.log("加载完成")
+                    that.type = "success";
+                    that.status = false;
+                    that.message = "加载完成";
+                }, 1000)
+            }
+        }
+
+    })
+
+    app.load();
+</script>
+</body>
+</html>
